@@ -12,12 +12,11 @@ int InputNum(string message)
 
 int thirdNumber(int num)
 {
-    while(num < 999)
+    while(num > 999)
     {
         num = num / 10;
     }
-    int thirdNum = num % 10;
-    return thirdNum;
+    return num % 10;
 }
 
 int number = InputNum("Введите число: ");
@@ -28,5 +27,5 @@ if(number < 100)
 else
 {
     int result = thirdNumber(number);
-    Console.WriteLine("Третья цифра заданного числа: {result}");
+    Console.WriteLine($"Третья цифра заданного числа: {result}");
 }
